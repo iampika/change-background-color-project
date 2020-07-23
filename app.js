@@ -12,4 +12,19 @@
     '#bbe1fa',
     '#d3dbff',
   ]
+
+  function changeBackground() {
+    const bodyColorIndex = parseInt(
+      Math.random() * colors.length
+    )
+    const buttonColorIndex = parseInt(
+      Math.random() * colors.length
+    )
+    body.style.backgroundColor = colors[bodyColorIndex]
+    button.style.backgroundColor = colors[buttonColorIndex]
+  }
+
+  button.addEventListener('click', changeBackground)
+
+  changeBackground()
 })()
